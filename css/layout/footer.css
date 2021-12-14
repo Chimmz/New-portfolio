@@ -1,0 +1,19 @@
+.footer {
+   grid-area: footer;
+   height: 14vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+   font-size: 1.3rem;
+   /* padding-block: 2.5rem; */
+   background-color: rgb(31, 31, 31);
+   text-align: center;
+   color: var(--color-gray-light);
+}
+.footer img {
+   width: 5rem;
+   aspect-ratio: 1;
+   border-radius: 50%;
+}

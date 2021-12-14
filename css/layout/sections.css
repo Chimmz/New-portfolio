@@ -1,0 +1,108 @@
+section.services {
+   grid-area: services;
+   background: linear-gradient(
+         101.53deg,
+         rgba(0, 0, 0, 0.55) 40%,
+         rgba(175, 51, 51, 0.55)
+      ),
+      url(../../img/laptopcode.jpg);
+
+   background-size: cover;
+   background-position: 0 40%; /* top and left values */
+   padding: 5.5rem;
+   color: #a3a3a3;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 3vw;
+}
+
+.service {
+   flex: 1;
+}
+.service__title {
+   font-size: 1.5em;
+   font-family: 'Nunito', sans-serif;
+   color: var(--color-gray-light);
+   margin-bottom: 1rem;
+}
+.service__title::first-letter {
+   color: var(--color-pry);
+}
+.service__note {
+   max-width: 40ch;
+   min-width: 20ch;
+}
+
+section.skills {
+   grid-area: skills;
+   display: flex;
+   align-items: flex-start;
+}
+
+/* < 900px */
+@media screen and (max-width: 56.25em) {
+   section.skills {
+      flex-direction: column;
+      margin-bottom: max(8vw, 7rem); /* Same as coreskills padding */
+   }
+   .core-skills,
+   .soft-skills {
+      width: 100%;
+   }
+}
+.core-skills {
+   flex: 0 1 65%;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 12.5rem);
+   justify-content: center;
+   column-gap: 4.5rem;
+   row-gap: 6rem;
+   padding: max(8vw, 7rem);
+   background: var(--color-white);
+}
+
+.soft-skills {
+   grid-area: softskills;
+   flex: 1;
+   align-self: stretch;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+   grid-auto-rows: max-content;
+   justify-content: center;
+   padding: 5vw 4vw;
+   color: var(--color-sec);
+   gap: 3rem;
+   background: #fff7f7;
+}
+.softskill {
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+   width: max-content;
+}
+.softskill > .iconify {
+   font-size: 2em;
+   color: var(--color-pry);
+}
+
+section.projects {
+   --grid-gutter: 6.5px;
+   grid-area: projects;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(49%, 1fr));
+   grid-auto-flow: row dense;
+   align-items: start;
+   grid-auto-rows: max-content;
+   gap: var(--grid-gutter);
+   padding: var(--grid-gutter);
+   padding-top: 0;
+}
+section.projects:hover .project:not(:hover)::before {
+   background: rgba(0, 0, 0, 0.65);
+}
+
+@media screen and (max-width: 37.5em) {
+   section.projects {
+      grid-template-columns: 1fr;
+   }
+}

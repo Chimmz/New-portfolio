@@ -1,0 +1,90 @@
+.skill {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1.5rem;
+   transition: transform 0.5s;
+}
+.skill:hover {
+   transform: scale(1.1);
+}
+.skill__circle {
+   width: 12.5rem;
+   height: 12.5rem;
+   display: grid;
+   place-items: center;
+   position: relative;
+}
+.skill__circle::after {
+   content: '';
+   position: absolute;
+   inset: 0;
+   background: var(--color-white);
+   border-top: 2px solid var(--color-pry);
+   /* box-shadow: 0 0.45rem 1rem rgba(0, 0, 0, 0.04),
+      0 1rem 4rem rgba(0, 0, 0, 0.06); */
+   box-shadow: 0 0.45rem 1rem rgb(0 0 0 / 13%), 0 2rem 4rem rgb(0 0 0 / 8%);
+}
+.skill__picture {
+   width: 5rem;
+   position: relative;
+}
+.skill__logo {
+   width: 100%;
+   height: 100%;
+   position: relative;
+   z-index: 2;
+}
+.skill__name {
+   font-size: 1.7rem;
+   color: var(--color-gray-dark);
+}
+.skill--show-circle .skill__circle::after {
+   transform: scale(1);
+}
+.skill[skillname*='Redux'] .skill__logo,
+.skill[skillname*='Figma'] .skill__logo {
+   transform: scale(1.9);
+}
+.skill[skillname*='Redux']:hover .skill__circle::after {
+   background: #f5e3f5;
+}
+.skill[skillname*='React']:hover .skill__circle::after {
+   background: #ddf1f8;
+}
+.skill[skillname*='JavaScript']:hover .skill__circle::after {
+   background: #f7df1e;
+}
+.skill[skillname*='Sass']:hover .skill__circle::after {
+   background: #f1dde6;
+}
+.skill[skillname*='MongoDB']:hover .skill__circle::after {
+   background: #c7f1c4;
+}
+.skill[skillname*='Figma']:hover .skill__circle::after {
+   background: #f7e5de;
+}
+.skill[skillname*='HTML']:hover .skill__circle::after {
+   background: linear-gradient(137.08deg, #d4dbf5 5.58%, #f7e4dc 108.84%);
+}
+.skill[skillname*='Node']:hover .skill__circle::after {
+   background: linear-gradient(149.16deg, #c7f1c4 14.67%, #dddddd 88.46%);
+}
+.skill[skillname*='MongoDB'] .skill__logo,
+.skill[skillname*='Node'] .skill__logo {
+   transform: scale(1.5);
+}
+.skill[skillname*='HTML'] .skill__logo {
+   transform: scale(1.5);
+   background: linear-gradient(
+      to right,
+      #fff3ee 5.58%,
+      #dce3ff 108.84%
+   ) !important;
+}
+.skill[skillname*='Node'] .skill__logo {
+   transform: scale(1.7);
+}
+.skill[skillname*='Git'] .skill__logo {
+   transform: scale(1.8);
+}

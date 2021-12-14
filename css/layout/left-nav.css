@@ -1,0 +1,34 @@
+.left-nav {
+   grid-area: leftnav;
+   height: 100vh;
+   max-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   background: var(--color-pry-darker);
+   font-size: 2.7rem;
+   color: rgba(255, 255, 255, 0.6);
+   padding-top: 3.5rem;
+   position: sticky;
+   top: 0;
+   left: 0;
+}
+
+@media screen and (max-width: 56.25em) {
+   .left-nav,
+   .left-nav * {
+      width: 0;
+      visibility: hidden;
+   }
+}
+
+/* Each social icon */
+.left-nav > * {
+   display: block;
+   width: 100%;
+   padding: 3.5rem max(3.8vw, 4rem);
+   transition: color 0.5s;
+}
+.left-nav > *:hover {
+   background: rgba(255, 255, 255, 0.03);
+   color: var(--color-white);
+}
