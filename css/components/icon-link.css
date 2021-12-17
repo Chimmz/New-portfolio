@@ -24,7 +24,7 @@
 }
 
 .icon-link.bg-pry:hover::before {
-   background: var(--color-pry-light);
+   background: var(--color-pry-lighter);
 }
 .icon-link.text-pry {
    color: var(--color-pry);

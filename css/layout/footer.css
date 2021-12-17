@@ -1,6 +1,6 @@
 .footer {
    grid-area: footer;
-   height: 14vh;
+   height: 17vh;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -8,7 +8,7 @@
    gap: 1.5rem;
    font-size: 1.3rem;
    /* padding-block: 2.5rem; */
-   background-color: rgb(31, 31, 31);
+   background-color: rgb(26, 26, 26);
    text-align: center;
    color: var(--color-gray-light);
 }

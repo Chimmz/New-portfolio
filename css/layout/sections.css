@@ -2,8 +2,8 @@ section.services {
    grid-area: services;
    background: linear-gradient(
          101.53deg,
-         rgba(0, 0, 0, 0.55) 40%,
-         rgba(175, 51, 51, 0.55)
+         rgba(0, 0, 0, 1) 50%,
+         rgba(175, 51, 51, 1)
       ),
       url(../../img/laptopcode.jpg);
 
@@ -21,7 +21,7 @@ section.services {
 }
 .service__title {
    font-size: 1.5em;
-   font-family: 'Nunito', sans-serif;
+   /* font-family: 'Nunito', sans-serif; */
    color: var(--color-gray-light);
    margin-bottom: 1rem;
 }
@@ -43,7 +43,7 @@ section.skills {
 @media screen and (max-width: 56.25em) {
    section.skills {
       flex-direction: column;
-      margin-bottom: max(8vw, 7rem); /* Same as coreskills padding */
+      margin-bottom: calc(max(7vw, 5rem) / 1); /* Same as coreskills padding */
    }
    .core-skills,
    .soft-skills {
@@ -71,14 +71,25 @@ section.skills {
    justify-content: center;
    padding: 5vw 4vw;
    color: var(--color-sec);
-   gap: 3rem;
-   background: #fff7f7;
+   gap: 2.5rem;
+   row-gap: 1.5rem;
+   /* background: #fff7f7; */
+   border-left: 1px solid rgb(238, 238, 238);
+}
+@media screen and (max-width: 56.25em) {
+   .soft-skills {
+      padding: 0 5vw;
+   }
 }
 .softskill {
    display: flex;
    align-items: center;
    gap: 1.5rem;
    width: max-content;
+   padding: 1rem;
+}
+.softskill:hover {
+   box-shadow: 0 0.45rem 1rem rgb(0 0 0 / 13%), 0 2rem 4rem rgb(0 0 0 / 8%);
 }
 .softskill > .iconify {
    font-size: 2em;

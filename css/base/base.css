@@ -5,7 +5,8 @@
    --color-pry-darker: #841f3d;
 
    --color-pry-light: #ffe1ea;
-   --color-pry-lighter: #fff3f7;
+   --color-pry-lighter: #ffe6ed;
+   --color-pry-lightest: #fff3f7;
 
    --color-sec: #000;
    --color-white: #fff;
@@ -14,7 +15,7 @@
    --color-gray-light: #d6d6d6;
    --color-gray-lighter: #f5f5f5;
 
-   --default-fsize: 1.6rem;
+   --default-fsize: 1.5rem;
 }
 
 *,

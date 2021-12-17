@@ -3,11 +3,8 @@
    flex-direction: column;
    align-items: center;
    gap: 1.5rem;
-   transition: transform 0.5s;
 }
-.skill:hover {
-   transform: scale(1.1);
-}
+
 .skill__circle {
    width: 12.5rem;
    height: 12.5rem;
@@ -15,6 +12,22 @@
    place-items: center;
    position: relative;
 }
+.skill__circle::before {
+   content: '';
+   position: absolute;
+   inset-inline: 0;
+   top: 0;
+   width: 0;
+   height: 2px;
+   background: var(--color-sec);
+   z-index: 2;
+   transition: width 0.5s;
+}
+
+.skill:hover > .skill__circle::before {
+   width: 100%;
+}
+
 .skill__circle::after {
    content: '';
    position: absolute;
@@ -36,7 +49,6 @@
    z-index: 2;
 }
 .skill__name {
-   font-size: 1.7rem;
    color: var(--color-gray-dark);
 }
 .skill--show-circle .skill__circle::after {
@@ -69,6 +81,9 @@
 }
 .skill[skillname*='Node']:hover .skill__circle::after {
    background: linear-gradient(149.16deg, #c7f1c4 14.67%, #dddddd 88.46%);
+}
+.skill[skillname*='Git']:hover .skill__circle::after {
+   background: #ffe5d3;
 }
 .skill[skillname*='MongoDB'] .skill__logo,
 .skill[skillname*='Node'] .skill__logo {
