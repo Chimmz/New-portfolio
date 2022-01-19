@@ -8,12 +8,14 @@
    gap: 1.5rem;
    font-size: 1.3rem;
    /* padding-block: 2.5rem; */
-   background-color: rgb(26, 26, 26);
+   background-color: #070707;
    text-align: center;
    color: var(--color-gray-light);
 }
 .footer img {
    width: 5rem;
    aspect-ratio: 1;
+   /* outline: 2px solid var(--color-pry); */
+   outline-offset: 3px;
    border-radius: 50%;
 }

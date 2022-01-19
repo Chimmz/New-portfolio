@@ -28,7 +28,7 @@
    font-size: 1.7rem;
    font-weight: 600;
    text-transform: uppercase;
-   color: #746868;
+   color: #424242;
    margin-bottom: 5rem;
 }
 .profile__resume-btn {
@@ -37,9 +37,12 @@
    border: 1px solid #f55c8a;
    color: var(--color-sec);
    transition: color 0.4s, background 0.2s;
+   border-radius: 1rem;
 }
 .profile__resume-btn:hover {
-   background: var(--color-pry-light);
+   background: var(--color-pry-lighter);
+   /* color: #f55c8a; */
+   /* border: 1px solid var(--color-sec); */
 }
 
 /* Right side */

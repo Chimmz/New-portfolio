@@ -48,18 +48,29 @@
    width: max-content;
    position: relative;
 }
+.nav__link::before,
 .nav__link::after {
    content: '';
    position: absolute;
-   left: 0;
-   bottom: 0;
-   height: 1%;
    inset-inline: 0;
+   height: 1%;
    width: 0;
-   background: var(--color-pry);
    transition: width 0.3s;
 }
-
+.nav__link::before {
+   bottom: -3px;
+   /* background: #c9c9c9; */
+   transition-delay: 0.15s;
+}
+.nav__link::after {
+   bottom: 0;
+   height: 1%;
+   background: var(--color-pry);
+}
+.nav__item:hover {
+   color: var(--color-sec); /* black*/
+}
+.nav__item:hover .nav__link::before,
 .nav__item:hover .nav__link::after {
    width: 100%;
 }
