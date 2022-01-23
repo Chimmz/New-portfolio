@@ -26,12 +26,14 @@
       <link rel="stylesheet" href="css/components/skill.css" />
       <link rel="stylesheet" href="css/components/project.css" />
       <link rel="stylesheet" href="css/components/icon-link.css" />
+      <link rel="stylesheet" href="css/components/service.css" />
 
       <link rel="stylesheet" href="css/layout/nav.css" />
       <link rel="stylesheet" href="css/layout/left-nav.css" />
       <link rel="stylesheet" href="css/layout/sections.css" />
       <link rel="stylesheet" href="css/layout/header.css" />
       <link rel="stylesheet" href="css/layout/footer.css" />
+      <link rel="stylesheet" href="css/layout/mobile-nav.css" />
 
       <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
       <script src="src/script.js" type="module" defer></script>
@@ -42,16 +44,17 @@
 
    <body>
       <nav class="nav">
-         <!-- <span class="nav__logo"></span> -->
+         <!-- <span class="nav__logo">c</span> -->
          <ul class="nav__list u-no-list-style">
             <li class="nav__item">
                <a href="" class="nav__link">About Chima</a>
             </li>
             <li class="nav__item">
-               <a href="" class="nav__link">Services I offer</a>
+               <a href="" class="nav__link">My skills</a>
             </li>
-            <li class="nav__item"><a href="" class="nav__link">Skills</a></li>
-            <li class="nav__item"><a href="" class="nav__link">Projects</a></li>
+            <li class="nav__item">
+               <a href="" class="nav__link">My projects</a>
+            </li>
          </ul>
          <span class="nav-toggler">
             <span></span>
@@ -65,7 +68,7 @@
             <h1 class="profile__name">
                <span style="color: #000">I am<br /></span> Chima Orji
             </h1>
-            <h6 class="profile__role">A Web Developer & Designer</h6>
+            <h6 class="profile__role">Web Developer & Designer</h6>
             <p class="parag profile__statement">
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac
                nunc nibh elementum et risus neque, adipiscing. Nisl faucibus
@@ -73,9 +76,7 @@
             </p>
 
             <a target="_blank" href="img/My Resume.pdf"
-               ><button class="profile__resume-btn">
-                  View Chima's resume
-               </button></a
+               ><button class="profile__resume-btn">See my resume</button></a
             >
          </div>
          <div class="profile__right">
@@ -120,34 +121,37 @@
          ></a>
       </aside>
 
-      <section class="services">
-         <div class="service">
-            <h4 class="service__title">Frontend Web Development</h4>
-            <p class="parag service__note">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
-               vero.
-            </p>
-         </div>
-         <div class="service">
-            <h4 class="service__title">Backend Web Development</h4>
-            <p class="parag service__note">
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-               Doloribus, magni.
-            </p>
-         </div>
-         <div class="service">
-            <h4 class="service__title">Fullstack Web Development</h4>
-            <p class="parag service__note">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
-               cum!
-            </p>
-         </div>
-         <div class="service">
-            <h4 class="service__title">UI/UX Design</h4>
-            <p class="parag service__note">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
-               vero.
-            </p>
+      <section class="what-i-do">
+         <h6 class="u-txt-pry">WHAT I DO</h6>
+         <div class="services">
+            <div class="service">
+               <h4 class="service__title">Frontend Web Development</h4>
+               <p class="parag service__note">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Totam, vero.
+               </p>
+            </div>
+            <div class="service">
+               <h4 class="service__title">Backend Web Development</h4>
+               <p class="parag service__note">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Doloribus, magni.
+               </p>
+            </div>
+            <div class="service">
+               <h4 class="service__title">Fullstack Web Development</h4>
+               <p class="parag service__note">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+                  cum!
+               </p>
+            </div>
+            <div class="service">
+               <h4 class="service__title">UI/UX Design</h4>
+               <p class="parag service__note">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Totam, vero.
+               </p>
+            </div>
          </div>
       </section>
 
@@ -234,6 +238,7 @@
                <span class="skill__name">Git/GitHub</span>
             </div>
          </div>
+
          <div class="soft-skills">
             <div class="softskill">
                <span class="iconify" data-icon="mdi:hand-okay"></span>
@@ -283,7 +288,7 @@
       </section>
 
       <section class="projects">
-         <a class="project" href="#helomi">
+         <!-- <a class="project" href="#helomi">
             <h4 class="project__name">Helomi</h4>
             <video
                src="./videos/helomi-compr.mp4"
@@ -326,7 +331,7 @@
                muted
                loop
             ></video>
-         </a>
+         </a> -->
       </section>
 
       <footer class="footer">
@@ -369,6 +374,15 @@
             <span class="iconify" data-icon="carbon:close"></span
          ></a>
       </div>
+
+      <aside class="mobile-nav">
+         <ul class="u-no-list-style">
+            <li><a href="#">About Chima</a></li>
+            <li><a href="#">My skills</a></li>
+            <li><a href="#">My projects</a></li>
+         </ul>
+      </aside>
+
       <div class="overlay u-hidden modal__close"></div>
    </body>
 </html>

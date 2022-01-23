@@ -22,19 +22,19 @@ window.addEventListener('hashchange', evt => {
    const projectName = hashValue.replaceAll('-', ' ').toUpperCase();
    console.log(projectName);
 
-   if (project) {
-      overlay.classList.remove('u-hidden');
-      projectPreview.querySelector('h3').textContent = projectName;
-      projectPreview.querySelector('p.parag').textContent = project.details;
-      projectPreview.querySelector('.tech-used').textContent =
-         project.techUsed.join(', ');
-      projectPreview
-         .querySelector('.project__actions')
-         .querySelector('#project-url').href = project.url;
-      projectPreview
-         .querySelector('.project__actions')
-         .querySelector('#github-url').href = project.githubUrl;
+   if (!project) return;
 
-      projectPreview.classList.remove('u-hidden');
-   }
+   overlay.classList.remove('u-hidden');
+   projectPreview.querySelector('h3').textContent = projectName;
+   projectPreview.querySelector('p.parag').textContent = project.details;
+   projectPreview.querySelector('.tech-used').textContent =
+      project.techUsed.join(', ');
+   projectPreview
+      .querySelector('.project__actions')
+      .querySelector('#project-url').href = project.url;
+   projectPreview
+      .querySelector('.project__actions')
+      .querySelector('#github-url').href = project.githubUrl;
+
+   projectPreview.classList.remove('u-hidden');
 });

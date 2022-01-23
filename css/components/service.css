@@ -1,0 +1,17 @@
+.service {
+   flex: 1;
+}
+.service__title {
+   font-size: 1.2em;
+   font-family: 'Montserrat', sans-serif;
+   color: var(--color-gray-light);
+   margin-bottom: 1rem;
+   /* text-transform: uppercase; */
+}
+.service__title::first-letter {
+   /* color: var(--color-pry); */
+}
+.service__note {
+   max-width: 40ch;
+   min-width: 20ch;
+}

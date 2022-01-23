@@ -33,7 +33,7 @@
 }
 .profile__resume-btn {
    margin-top: 2rem;
-   padding: 1.2em 1.7em;
+   padding: 0.8em 1.4em;
    border: 1px solid #f55c8a;
    color: var(--color-sec);
    transition: color 0.4s, background 0.2s;
@@ -43,6 +43,10 @@
    background: var(--color-pry-lighter);
    /* color: #f55c8a; */
    /* border: 1px solid var(--color-sec); */
+}
+.profile__resume-btn:focus {
+   outline: 1px solid #8f8f8f;
+   outline-offset: 2px;
 }
 
 /* Right side */
@@ -69,7 +73,7 @@
    }
 }
 .profile__picture::before {
-   content: '';
+   /* content: ''; */
    position: absolute;
    top: 50%;
    height: 35%;
@@ -98,4 +102,6 @@
 
 .profile__socials {
    display: flex;
+   gap: 5px;
+   color: #7e2525;
 }
