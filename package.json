@@ -1,23 +1,24 @@
 {
-  "name": "portfolio-site",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Chimmz/New-portfolio.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Chimmz/New-portfolio/issues"
-  },
-  "homepage": "https://github.com/Chimmz/New-portfolio#readme",
-  "dependencies": {
-    "parcel": "^2.2.1"
-  }
+   "name": "portfolio-site",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "start": "parcel index.html",
+      "build": "parcel build index.html"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Chimmz/New-portfolio.git"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/Chimmz/New-portfolio/issues"
+   },
+   "homepage": "https://github.com/Chimmz/New-portfolio#readme",
+   "dependencies": {
+      "parcel": "^2.2.1"
+   }
 }
