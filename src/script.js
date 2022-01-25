@@ -1,40 +1,26 @@
-import { projects } from './projects.js';
+import * as mediaUtils from './mediaUtils.js';
+import * as observers from './observers.js';
+import * as projectHandlers from './project.js';
+import { allProjects } from './projects.js';
 
-const projectPreview = document.querySelector('.project--preview');
+const projectModal = document.querySelector('.project--preview');
 const overlay = document.querySelector('.overlay');
 
-const titleCase = str =>
-   str
-      .split(' ')
-      .map(word => word[0].toUpperCase() + word.slice(1).toLowerCase())
-      .pop();
-
-window.addEventListener('hashchange', evt => {
+const hashChangeHandler = function (evt) {
    const hashValue = evt.newURL.split('#')[1];
 
    if (hashValue === 'close-project') {
-      projectPreview.classList.add('u-hidden');
+      projectModal.classList.add('u-hidden');
       overlay.classList.add('u-hidden');
       return;
    }
 
-   const project = projects[hashValue];
-   const projectName = hashValue.replaceAll('-', ' ').toUpperCase();
-   console.log(projectName);
-
+   const project = allProjects[hashValue];
    if (!project) return;
 
+   project.name = hashValue.replaceAll('-', ' ').toUpperCase();
    overlay.classList.remove('u-hidden');
-   projectPreview.querySelector('h3').textContent = projectName;
-   projectPreview.querySelector('p.parag').textContent = project.details;
-   projectPreview.querySelector('.tech-used').textContent =
-      project.techUsed.join(', ');
-   projectPreview
-      .querySelector('.project__actions')
-      .querySelector('#project-url').href = project.url;
-   projectPreview
-      .querySelector('.project__actions')
-      .querySelector('#github-url').href = project.githubUrl;
+   projectHandlers.handleDisplayProject(projectModal, project);
+};
 
-   projectPreview.classList.remove('u-hidden');
-});
+window.addEventListener('hashchange', hashChangeHandler);

@@ -2,15 +2,18 @@
    grid-area: leftnav;
    height: 100vh;
    max-height: 100vh;
+   padding-top: 3.5rem;
+
    display: flex;
    flex-direction: column;
    background: var(--color-pry-dark);
    font-size: 2.7rem;
    color: rgba(255, 255, 255, 0.6);
-   padding-top: 3.5rem;
+
    position: sticky;
    top: 0;
    left: 0;
+   z-index: 15;
 }
 
 @media screen and (max-width: 56.25em) {
@@ -21,16 +24,63 @@
    }
 }
 
+.left-nav,
+.left-nav > * {
+   transition: color 0.2s;
+}
+
 /* Each social icon */
 .left-nav > * {
    display: block;
    width: 100%;
    padding: 3.5rem max(3.6vw, 3.8rem);
    border-inline-end: 1px solid transparent;
+   position: relative;
 }
+
+.left-nav > *::before {
+   content: attr(data-social-label);
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   left: calc(100% + 3rem);
+   background: #fff;
+   color: #000;
+   width: max-content;
+   padding: 1rem 1.2rem;
+   font-size: calc(0.7 * var(--default-fsize));
+   box-shadow: 0 0 1rem rgb(0 0 0 / 13%), 0 2rem 4rem rgb(0 0 0 / 8%);
+   border-radius: 3px;
+   opacity: 0;
+   visibility: hidden;
+   transition: left 0.5s, opacity 0.5s;
+}
+
+.left-nav > *::after {
+   content: '';
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%) translateX(-50%) rotate(45deg);
+   left: calc(100% + 3rem);
+   width: 12px;
+   aspect-ratio: 1;
+   background: #fff;
+   box-shadow: 0 0.45rem 1rem rgb(0 0 0 / 15%), 0 2rem 4rem rgb(0 0 0 / 10%);
+   border: 1px solid #e7e7e7;
+   z-index: -1;
+   opacity: 0;
+   visibility: hidden;
+   transition: left 0.5s, opacity 0.5s;
+}
+
+.left-nav > *:hover::before,
+.left-nav > *:hover::after {
+   left: calc(100% + 1rem);
+   opacity: 1;
+   visibility: visible;
+}
+
 .left-nav > *:hover {
-   /* background: #000;
-   color: var(--color-pry); */
    background: rgba(0, 0, 0, 0.1);
    color: #fff;
    border-inline-end: 1px solid var(--color-pry-dark);

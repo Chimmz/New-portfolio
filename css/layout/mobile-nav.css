@@ -4,10 +4,17 @@ aside.mobile-nav {
    left: 0;
    background: #202020;
    width: 100%;
-   box-shadow: 0 2rem 3rem rgb(0 0 0 / 40%), 0 3rem 6rem rgb(0 0 0 / 20%);
    padding: 15rem 8rem;
+   transform: translateY(-100%);
+   /* opacity: none; */
    overflow: hidden;
+   transition: transform 0.5s, box-shadow 0.2s 0.2s;
    z-index: 19;
+}
+
+aside.mobile-nav.drawn-out {
+   transform: translateY(0);
+   /* box-shadow: 0 2rem 3rem rgb(0 0 0 / 40%), 0 3rem 6rem rgb(0 0 0 / 20%); */
 }
 
 .mobile-nav ul > *:not(:last-child) {
@@ -50,4 +57,12 @@ aside.mobile-nav {
 .mobile-nav ul li:hover::before,
 .mobile-nav ul li:hover::after {
    width: 100vw;
+}
+
+.overlay {
+   position: fixed;
+   inset: 0;
+   background: rgba(46, 1, 1, 0.75);
+   z-index: 9;
+   transition: background 1s;
 }

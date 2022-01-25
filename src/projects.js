@@ -1,5 +1,32 @@
+import * as mediaUtils from './mediaUtils.js';
+import * as observers from './observers.js';
+import * as projectHandlers from './project.js';
+
+const projects = document.querySelectorAll('.project');
+const projectVideos = [...projects].map(p => p.querySelector('video'));
+
+const projectsSection = document.querySelector('section.projects');
+const observe = observers.makeObservation.bind(projectsSection);
+
+const projectsSectionObserveHandler = ([{ isIntersecting }]) => {
+   if (!isIntersecting) return;
+   projectVideos.forEach(vid => mediaUtils.loadSrc.call(vid));
+};
+
+const init = () => {
+   observe(projectsSectionObserveHandler, { root: null, threshold: 0 });
+};
+
+init();
+
+projects.forEach(project => {
+   const handle = projectHandlers.addEventHandler.bind(project);
+   handle('mouseenter', projectHandlers.handleProjectHover);
+   // project.addEventListener('mouseenter', projectHandlers.handleProjectHover);
+});
+
 // prettier-ignore
-export const projects = {
+export const allProjects = {
    helomi: {
       details:
          'Helomi is a single page chat app that enables users to communicate with one another through text messaging and video calling. I built this robust MERN stack project as my final year project in college. I chose this project topic because I was really curious about existing apps like Whatsapp performed their real-time functionalities. At the same time I was really fascinated by React. So, I wanted to bring something to life out of the mix of the curiosity and fascination.',

@@ -5,8 +5,8 @@
    justify-content: space-between;
    align-items: center;
    gap: 5rem;
-   padding: 7rem 7vw;
-   /* padding-bottom: 7rem; */
+   padding: 5rem 7vw;
+   padding-bottom: 7rem;
    background: var(--color-white);
    overflow: hidden;
 }
@@ -21,6 +21,7 @@
    font-size: clamp(6rem, 8rem, 7vw);
    color: var(--color-pry);
    margin-left: -3px;
+   margin-bottom: 1rem;
    line-height: 1.15em;
 }
 
@@ -47,6 +48,7 @@
 .profile__resume-btn:focus {
    outline: 1px solid #8f8f8f;
    outline-offset: 2px;
+   background: var(--color-pry-lighter);
 }
 
 /* Right side */
@@ -73,7 +75,7 @@
    }
 }
 .profile__picture::before {
-   /* content: ''; */
+   content: '';
    position: absolute;
    top: 50%;
    height: 35%;

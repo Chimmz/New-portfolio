@@ -23,8 +23,8 @@
       <link rel="stylesheet" href="css/base/typography.css" />
       <link rel="stylesheet" href="css/base/utils.css" />
 
-      <link rel="stylesheet" href="css/components/skill.css" />
-      <link rel="stylesheet" href="css/components/project.css" />
+      <link rel="stylesheet" href="css/components/skills.css" />
+      <link rel="stylesheet" href="css/components/projects.css" />
       <link rel="stylesheet" href="css/components/icon-link.css" />
       <link rel="stylesheet" href="css/components/service.css" />
 
@@ -38,6 +38,8 @@
       <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
       <script src="src/script.js" type="module" defer></script>
       <script src="src/projects.js" type="module" defer></script>
+      <script src="src/mobileNav.js" type="module" defer></script>
+      <script src="src/skills.js" type="module" defer></script>
 
       <title>Chima Orji | Portfolio Website</title>
    </head>
@@ -46,17 +48,17 @@
       <nav class="nav">
          <!-- <span class="nav__logo">c</span> -->
          <ul class="nav__list u-no-list-style">
-            <li class="nav__item">
-               <a href="" class="nav__link">About Chima</a>
+            <li class="nav__item nav__item--active">
+               <a href="#about-me" class="nav__link">About</a>
             </li>
             <li class="nav__item">
-               <a href="" class="nav__link">My skills</a>
+               <a href="#skills" class="nav__link">My skills</a>
             </li>
             <li class="nav__item">
-               <a href="" class="nav__link">My projects</a>
+               <a href="#projects" class="nav__link">My projects</a>
             </li>
          </ul>
-         <span class="nav-toggler">
+         <span class="nav-toggler nav-toggler--nav-opened nav-toggler--fixed">
             <span></span>
             <span></span>
             <span></span>
@@ -64,15 +66,15 @@
       </nav>
 
       <header class="header profile">
-         <div class="profile__left">
+         <div class="profile__left" id="about-me">
             <h1 class="profile__name">
                <span style="color: #000">I am<br /></span> Chima Orji
             </h1>
             <h6 class="profile__role">Web Developer & Designer</h6>
             <p class="parag profile__statement">
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac
-               nunc nibh elementum et risus neque, adipiscing. Nisl faucibus
-               eget
+               Hi there ✋ <br />
+               I create memorable experiences on the web. Building useful and
+               usable products inspires me forever.
             </p>
 
             <a target="_blank" href="img/My Resume.pdf"
@@ -107,16 +109,29 @@
       </header>
 
       <aside class="left-nav">
-         <a target="_blank" href="www.linkedin.com/in/chima-divine-orji"
-            ><span class="iconify" data-icon="cib:linkedin-in"></span
-         ></a>
-         <a target="_blank" href="https://github.com/Chimmz/"
+         <a
+            target="_blank"
+            href="www.linkedin.com/in/chima-divine-orji"
+            data-social-label="My Linkedin"
+         >
+            <span class="iconify" data-icon="cib:linkedin-in"></span>
+         </a>
+         <a
+            target="_blank"
+            href="https://github.com/Chimmz/"
+            data-social-label="My GitHub"
             ><span class="iconify" data-icon="akar-icons:github-fill"></span
          ></a>
-         <a target="_blank" href="mailto: chimaorji25@gmail.com"
+         <a
+            target="_blank"
+            href="mailto: chimaorji25@gmail.com"
+            data-social-label="Email me"
             ><span class="iconify" data-icon="ic:round-email"></span
          ></a>
-         <a target="_blank" href="https://wa.me/+905338319606"
+         <a
+            target="_blank"
+            href="https://wa.me/+905338319606"
+            data-social-label="Whatsapp me"
             ><span class="iconify" data-icon="bx:bxs-phone"></span
          ></a>
       </aside>
@@ -127,40 +142,50 @@
             <div class="service">
                <h4 class="service__title">Frontend Web Development</h4>
                <p class="parag service__note">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Totam, vero.
+                  My core expertise is building excellent and performant UIs
+                  with code that browsers understand.
                </p>
             </div>
             <div class="service">
                <h4 class="service__title">Backend Web Development</h4>
                <p class="parag service__note">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Doloribus, magni.
+                  I'm able to develop scalable backend systems with
+                  Node/Express.js.
                </p>
             </div>
             <div class="service">
                <h4 class="service__title">Fullstack Web Development</h4>
                <p class="parag service__note">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
-                  cum!
+                  Experienced in creating fullstack web applications and
+                  websites.
                </p>
             </div>
             <div class="service">
                <h4 class="service__title">UI/UX Design</h4>
                <p class="parag service__note">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Totam, vero.
+                  I create mouth-watering UI designs with Figma. See my Google
+                  UX Design Foundations
+                  <a
+                     target="_blank"
+                     href="https://coursera.org/share/99bf37962c25e7ce64416325412e95bf"
+                     class="u-txt-pry"
+                     >certificate</a
+                  >
                </p>
             </div>
          </div>
       </section>
 
-      <section class="skills">
+      <section class="skills" id="skills">
          <div class="core-skills">
             <div class="skill" skillname="HTML/CSS">
                <div class="skill__circle">
                   <picture class="skill__picture">
-                     <img class="skill__logo" src="img/html-css.png" alt="" />
+                     <img
+                        class="skill__logo"
+                        data-src="img/html-css.png"
+                        alt=""
+                     />
                   </picture>
                </div>
                <span class="skill__name">HTML/CSS</span>
@@ -168,7 +193,11 @@
             <div class="skill" skillname="JavaScript">
                <div class="skill__circle">
                   <picture class="skill__picture">
-                     <img class="skill__logo" src="img/js-logo.png" alt="" />
+                     <img
+                        class="skill__logo"
+                        data-src="img/js-logo.png"
+                        alt=""
+                     />
                   </picture>
                </div>
                <span class="skill__name">JavaScript</span>
@@ -176,7 +205,11 @@
             <div class="skill" skillname="React">
                <div class="skill__circle">
                   <picture class="skill__picture">
-                     <img class="skill__logo" src="img/react-logo.png" alt="" />
+                     <img
+                        class="skill__logo"
+                        data-src="img/react-logo.png"
+                        alt=""
+                     />
                   </picture>
                </div>
                <span class="skill__name">React.js</span>
@@ -184,7 +217,11 @@
             <div class="skill" skillname="Redux">
                <div class="skill__circle">
                   <picture class="skill__picture">
-                     <img class="skill__logo" src="img/redux-logo.png" alt="" />
+                     <img
+                        class="skill__logo"
+                        data-src="img/redux-logo.png"
+                        alt=""
+                     />
                   </picture>
                </div>
                <span class="skill__name">Redux.js</span>
@@ -192,7 +229,11 @@
             <div class="skill" skillname="Figma">
                <div class="skill__circle">
                   <picture class="skill__picture">
-                     <img class="skill__logo" src="img/figma-logo.png" alt="" />
+                     <img
+                        class="skill__logo"
+                        data-src="img/figma-logo.png"
+                        alt=""
+                     />
                   </picture>
                </div>
                <span class="skill__name">UI/UX</span>
@@ -200,7 +241,11 @@
             <div class="skill" skillname="Sass">
                <div class="skill__circle">
                   <picture class="skill__picture">
-                     <img class="skill__logo" src="img/sass-logo.png" alt="" />
+                     <img
+                        class="skill__logo"
+                        data-src="img/sass-logo.png"
+                        alt=""
+                     />
                   </picture>
                </div>
                <span class="skill__name">Sass</span>
@@ -208,7 +253,11 @@
             <div class="skill" skillname="Node/Express.js">
                <div class="skill__circle">
                   <picture class="skill__picture">
-                     <img class="skill__logo" src="img/node-logo.png" alt="" />
+                     <img
+                        class="skill__logo"
+                        data-src="img/node-logo.png"
+                        alt=""
+                     />
                   </picture>
                </div>
                <span class="skill__name">Node/Express.js</span>
@@ -218,7 +267,7 @@
                   <picture class="skill__picture">
                      <img
                         class="skill__logo"
-                        src="img/mongodb-logo.png"
+                        data-src="img/mongodb-logo.png"
                         alt=""
                      />
                   </picture>
@@ -230,7 +279,7 @@
                   <picture class="skill__picture">
                      <img
                         class="skill__logo"
-                        src="img/git-logo-removebg-preview.png"
+                        data-src="img/git-logo-removebg-preview.png"
                         alt=""
                      />
                   </picture>
@@ -241,60 +290,59 @@
 
          <div class="soft-skills">
             <div class="softskill">
-               <span class="iconify" data-icon="mdi:hand-okay"></span>
+               <span class="iconify" data-icon="clarity:success-line"></span>
                <span>Creativity</span>
             </div>
             <div class="softskill">
-               <span class="iconify" data-icon="mdi:hand-okay"></span>
+               <span class="iconify" data-icon="clarity:success-line"></span>
                <span>Critical thinking</span>
             </div>
             <div class="softskill">
-               <span class="iconify" data-icon="mdi:hand-okay"></span>
+               <span class="iconify" data-icon="clarity:success-line"></span>
                <span>Problem solving</span>
             </div>
             <div class="softskill">
-               <span class="iconify" data-icon="mdi:hand-okay"></span>
+               <span class="iconify" data-icon="clarity:success-line"></span>
                <span>Team work</span>
             </div>
             <div class="softskill">
-               <span class="iconify" data-icon="mdi:hand-okay"></span>
+               <span class="iconify" data-icon="clarity:success-line"></span>
                <span>Empathy</span>
             </div>
             <div class="softskill">
-               <span class="iconify" data-icon="mdi:hand-okay"></span>
+               <span class="iconify" data-icon="clarity:success-line"></span>
                <span>Fast learner</span>
             </div>
             <div class="softskill">
-               <span class="iconify" data-icon="mdi:hand-okay"></span>
+               <span class="iconify" data-icon="clarity:success-line"></span>
                <span>Communication</span>
             </div>
             <div class="softskill">
-               <span class="iconify" data-icon="mdi:hand-okay"></span>
+               <span class="iconify" data-icon="clarity:success-line"></span>
                <span>Confidence</span>
             </div>
             <div class="softskill">
-               <span class="iconify" data-icon="mdi:hand-okay"></span>
+               <span class="iconify" data-icon="clarity:success-line"></span>
                <span>Time management</span>
             </div>
             <div class="softskill">
-               <span class="iconify" data-icon="mdi:hand-okay"></span>
+               <span class="iconify" data-icon="clarity:success-line"></span>
                <span>Humility</span>
             </div>
             <div class="softskill">
-               <span class="iconify" data-icon="mdi:hand-okay"></span>
+               <span class="iconify" data-icon="clarity:success-line"></span>
                <span>Patience</span>
             </div>
          </div>
       </section>
 
-      <section class="projects">
-         <!-- <a class="project" href="#helomi">
+      <section class="projects" id="projects">
+         <a class="project project--main" href="#helomi">
             <h4 class="project__name">Helomi</h4>
             <video
-               src="./videos/helomi-compr.mp4"
+               data-src="videos/helomi-compr.mp4"
                alt=""
                class="project__video"
-               autoplay
                loop
                muted
             ></video>
@@ -302,10 +350,9 @@
          <a class="project" href="#nisclinic">
             <h4 class="project__name">Nisclinic</h4>
             <video
-               src="./videos/nisclinic-compr.mp4"
+               data-src="videos/nisclinic-compr.mp4"
                alt=""
                class="project__video"
-               autoplay
                muted
                loop
             ></video>
@@ -313,21 +360,19 @@
          <a class="project" href="#dgmmc">
             <h4 class="project__name">DGMMC</h4>
             <video
-               src="./videos/dgmmc-compr.mp4"
+               data-src="videos/dgmmc-compr.mp4"
                alt=""
                class="project__video"
-               autoplay
                muted
                loop
             ></video>
          </a>
-         <a class="project" href="#dad-jokes">
+         <!-- <a class="project" href="#dad-jokes">
             <h4 class="project__name">DAD JOKES</h4>
             <video
                src="./videos/dad-jokes-compr.mp4"
                alt=""
                class="project__video"
-               autoplay
                muted
                loop
             ></video>
@@ -336,7 +381,7 @@
 
       <footer class="footer">
          <img src="img/Dev-photo.PNG" alt="" />
-         <span>© Copyright 2021. All rights reserved to Chima Orji.</span>
+         <span>All rights reserved to Chima Orji.</span>
       </footer>
 
       <div class="project--preview modal u-hidden">
@@ -377,9 +422,9 @@
 
       <aside class="mobile-nav">
          <ul class="u-no-list-style">
-            <li><a href="#">About Chima</a></li>
-            <li><a href="#">My skills</a></li>
-            <li><a href="#">My projects</a></li>
+            <li><a href="#about-me">About Chima</a></li>
+            <li><a href="#skills">My skills</a></li>
+            <li><a href="#projects">My projects</a></li>
          </ul>
       </aside>
 

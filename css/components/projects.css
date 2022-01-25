@@ -1,10 +1,14 @@
 .project {
-   height: 100%;
+   flex-basis: max(45rem, 49%);
+   flex-grow: 1;
+   /* height: 100%; */
    width: 100%;
    position: relative;
    cursor: pointer;
 }
-
+.project--main {
+   flex-basis: 100%;
+}
 .project::before {
    content: '';
    position: absolute;
@@ -37,13 +41,6 @@
    text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
 }
 
-.overlay {
-   position: fixed;
-   inset: 0;
-   background: rgba(46, 1, 1, 0.5);
-   z-index: 9;
-   transition: background 1s;
-}
 .project--preview {
    position: fixed;
    inset: 0;
@@ -54,7 +51,7 @@
    border-radius: 5px;
    padding: 3rem 5rem;
    box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.3);
-   z-index: 10;
+   z-index: 21;
 }
 
 .project--preview > *:not(:last-child) {
