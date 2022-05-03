@@ -1,16 +1,16 @@
 .nav {
    grid-area: nav;
    background: var(--color-white);
-   padding: 3rem 7vw;
-   padding-bottom: 0;
+   padding: 2rem 4rem;
    display: flex;
    align-items: center;
    gap: 1rem;
+   /* border: 1px solid #ecebeb; */
 }
 
 @media screen and (max-width: 56.25em) {
    .nav {
-      padding-block: 6rem;
+      padding-block: 4rem;
    }
 }
 
@@ -18,23 +18,22 @@
    font-size: 6rem;
    color: var(--color-pry);
 }
-.nav__list,
-.nav__item {
-   height: 100%;
-}
 
 .nav__list {
    display: flex;
-   gap: 4.5rem;
-   margin-inline: auto;
-   border-bottom: 1px solid #f3f3f3;
+   border-radius: 999px;
+   /* box-shadow: 0 4px 13px rgba(0, 0, 0, 0.1); */
+   /* box-shadow: 0 0.45rem 0.5rem rgb(0 0 0 / 13%), 0 1rem 2rem rgb(0 0 0 / 8%); */
+   box-shadow: 0 0.45rem 0.7rem rgb(0 0 0 / 8%), 0 0rem 3rem rgb(0 0 0 / 9%);
+   margin-left: auto;
+   overflow: hidden;
+   animation: reveal-width 2s forwards;
 }
 
 @media screen and (max-width: 56.25em) {
    .nav__list {
-      flex: 1;
+      margin-inline: auto;
       justify-content: center;
-      border-color: transparent;
    }
 }
 
@@ -47,43 +46,33 @@
    }
 }
 
-.nav__item {
-   display: grid;
-   place-items: center;
-}
-.nav__item:hover {
-   color: var(--color-sec); /* black*/
+.nav__item:hover .nav__link {
+   color: var(--color-sec); /* black */
 }
 
-.nav__item .nav__link::after {
-   background: #cfcfcf;
-}
-
-.nav__item:hover .nav__link::after {
-   width: 100%;
-}
-
-.nav__item--active .nav__link::after {
-   width: 100%;
-   background: var(--color-pry);
+.nav__item--active .nav__link {
+   color: var(--color-sec);
 }
 
 .nav__link {
    text-decoration: none;
    display: block;
    width: max-content;
-   padding-bottom: 1.5rem;
+   padding: 1.5rem 3rem;
+   color: #b1b1b1;
+   transition: color 0.2s;
    position: relative;
 }
-.nav__link::after {
+
+.nav__link::before {
    content: '';
    position: absolute;
-   inset-inline: 0;
-   bottom: 0;
-   height: 1%;
-   background: gray;
-   width: 0;
-   transition: width 0.3s;
+   right: 0;
+   top: 50%;
+   transform: translate(50%, -50%);
+   width: 1px;
+   height: 50%;
+   background: #e7e7e7;
 }
 
 .nav-toggler {
@@ -94,7 +83,7 @@
    cursor: pointer;
    display: none;
    position: relative;
-   z-index: 20;
+   z-index: 32;
 }
 
 @media screen and (max-width: 37.5em) {

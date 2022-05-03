@@ -58,6 +58,7 @@
                <a href="#projects" class="nav__link">My projects</a>
             </li>
          </ul>
+
          <span class="nav-toggler nav-toggler--nav-opened nav-toggler--fixed">
             <span></span>
             <span></span>
@@ -70,16 +71,21 @@
             <h1 class="profile__name">
                <span style="color: #000">I am<br /></span> Chima Orji
             </h1>
-            <h6 class="profile__role">Web Developer & Designer</h6>
+            <h6 class="profile__role">Frontend Engineer & Designer</h6>
             <p class="parag profile__statement">
                Hi there ✋ <br />
-               I create memorable experiences on the web. Building useful and
-               usable products inspires me forever.
+               I create memorable experiences on the web. Building beautiful and
+               usable digital products inspires me forever.
             </p>
 
             <a target="_blank" href="img/My Resume.pdf"
-               ><button class="profile__resume-btn">See my resume</button></a
-            >
+               ><button class="profile__resume-btn">
+                  See my resume
+                  <span
+                     class="iconify"
+                     data-icon="akar-icons:link-out"
+                  ></span></button
+            ></a>
          </div>
          <div class="profile__right">
             <picture class="profile__picture">
@@ -101,7 +107,7 @@
                <a href="mailto: chimaorji25@gmail.com" class="icon-link">
                   <span class="iconify" data-icon="ic:round-email"></span
                ></a>
-               <a href="https://wa.me/+905338319606" class="icon-link">
+               <a href="https://wa.me/+2348168995496" class="icon-link">
                   <span class="iconify" data-icon="bx:bxs-phone"></span
                ></a>
             </div>
@@ -111,7 +117,7 @@
       <aside class="left-nav">
          <a
             target="_blank"
-            href="www.linkedin.com/in/chima-divine-orji"
+            href="https://www.linkedin.com/in/chima-divine-orji"
             data-social-label="My Linkedin"
          >
             <span class="iconify" data-icon="cib:linkedin-in"></span>
@@ -130,7 +136,7 @@
          ></a>
          <a
             target="_blank"
-            href="https://wa.me/+905338319606"
+            href="https://wa.me/+2348168995496"
             data-social-label="Whatsapp me"
             ><span class="iconify" data-icon="bx:bxs-phone"></span
          ></a>
@@ -140,27 +146,30 @@
          <h6 class="u-txt-pry">WHAT I DO</h6>
          <div class="services">
             <div class="service">
-               <h4 class="service__title">Frontend Web Development</h4>
+               <img src="img/frontend-icon.png" alt="" />
+               <h4 class="service__title">Frontend Development</h4>
                <p class="parag service__note">
                   My core expertise is building excellent and performant UIs
                   with code that browsers understand.
                </p>
             </div>
             <div class="service">
-               <h4 class="service__title">Backend Web Development</h4>
+               <img src="img/backend-icon.png" alt="" />
+               <h4 class="service__title">Backend Development</h4>
                <p class="parag service__note">
                   I'm able to develop scalable backend systems with
                   Node/Express.js.
                </p>
             </div>
-            <div class="service">
+            <!-- <div class="service">
                <h4 class="service__title">Fullstack Web Development</h4>
                <p class="parag service__note">
                   Experienced in creating fullstack web applications and
                   websites.
                </p>
-            </div>
+            </div> -->
             <div class="service">
+               <img src="img/ux-icon.png" alt="" />
                <h4 class="service__title">UI/UX Design</h4>
                <p class="parag service__note">
                   I create mouth-watering UI designs with Figma. See my Google
@@ -178,113 +187,141 @@
 
       <section class="skills" id="skills">
          <div class="core-skills">
-            <div class="skill" skillname="HTML/CSS">
-               <div class="skill__circle">
-                  <picture class="skill__picture">
-                     <img
-                        class="skill__logo"
-                        data-src="img/html-css.png"
-                        alt=""
-                     />
-                  </picture>
+            <!-- Frontend skills -->
+            <div class="skill-group" group-name="Frontend Skills">
+               <div class="skill" skillname="HTML/CSS">
+                  <div class="skill__box">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           data-src="img/html-css.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">HTML/CSS</span>
                </div>
-               <span class="skill__name">HTML/CSS</span>
+
+               <div class="skill" skillname="Sass">
+                  <div class="skill__box">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           data-src="img/sass-logo.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">Sass</span>
+               </div>
+
+               <div class="skill" skillname="JavaScript">
+                  <div class="skill__box">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           data-src="img/js-logo.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">JavaScript</span>
+               </div>
+
+               <div class="skill" skillname="React">
+                  <div class="skill__box">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           data-src="img/react-logo.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">React</span>
+               </div>
+
+               <div class="skill" skillname="Redux">
+                  <div class="skill__box">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           data-src="img/redux-logo.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">Redux</span>
+               </div>
+
+               <div class="skill" skillname="Next">
+                  <div class="skill__box">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           data-src="img/nextjs-img.jpg"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">Next.js</span>
+               </div>
             </div>
-            <div class="skill" skillname="JavaScript">
-               <div class="skill__circle">
-                  <picture class="skill__picture">
-                     <img
-                        class="skill__logo"
-                        data-src="img/js-logo.png"
-                        alt=""
-                     />
-                  </picture>
+
+            <!-- Backend skills -->
+            <div class="skill-group" group-name="Backend & Other Skills">
+               <div class="skill" skillname="Node/Express.js">
+                  <div class="skill__box">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           data-src="img/node-logo.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">Node/Express</span>
                </div>
-               <span class="skill__name">JavaScript</span>
+               <div class="skill" skillname="MongoDB">
+                  <div class="skill__box">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           data-src="img/mongodb-logo.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">MongoDB</span>
+               </div>
+               <div class="skill" skillname="Git">
+                  <div class="skill__box">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           data-src="img/git-logo-removebg-preview.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">Git/GitHub</span>
+               </div>
             </div>
-            <div class="skill" skillname="React">
-               <div class="skill__circle">
-                  <picture class="skill__picture">
-                     <img
-                        class="skill__logo"
-                        data-src="img/react-logo.png"
-                        alt=""
-                     />
-                  </picture>
+
+            <!-- UI design skills -->
+            <div class="skill-group" group-name="Design">
+               <div class="skill" skillname="Figma">
+                  <div class="skill__box">
+                     <picture class="skill__picture">
+                        <img
+                           class="skill__logo"
+                           data-src="img/figma-logo.png"
+                           alt=""
+                        />
+                     </picture>
+                  </div>
+                  <span class="skill__name">UI/UX</span>
                </div>
-               <span class="skill__name">React.js</span>
-            </div>
-            <div class="skill" skillname="Redux">
-               <div class="skill__circle">
-                  <picture class="skill__picture">
-                     <img
-                        class="skill__logo"
-                        data-src="img/redux-logo.png"
-                        alt=""
-                     />
-                  </picture>
-               </div>
-               <span class="skill__name">Redux.js</span>
-            </div>
-            <div class="skill" skillname="Figma">
-               <div class="skill__circle">
-                  <picture class="skill__picture">
-                     <img
-                        class="skill__logo"
-                        data-src="img/figma-logo.png"
-                        alt=""
-                     />
-                  </picture>
-               </div>
-               <span class="skill__name">UI/UX</span>
-            </div>
-            <div class="skill" skillname="Sass">
-               <div class="skill__circle">
-                  <picture class="skill__picture">
-                     <img
-                        class="skill__logo"
-                        data-src="img/sass-logo.png"
-                        alt=""
-                     />
-                  </picture>
-               </div>
-               <span class="skill__name">Sass</span>
-            </div>
-            <div class="skill" skillname="Node/Express.js">
-               <div class="skill__circle">
-                  <picture class="skill__picture">
-                     <img
-                        class="skill__logo"
-                        data-src="img/node-logo.png"
-                        alt=""
-                     />
-                  </picture>
-               </div>
-               <span class="skill__name">Node/Express.js</span>
-            </div>
-            <div class="skill" skillname="MongoDB">
-               <div class="skill__circle">
-                  <picture class="skill__picture">
-                     <img
-                        class="skill__logo"
-                        data-src="img/mongodb-logo.png"
-                        alt=""
-                     />
-                  </picture>
-               </div>
-               <span class="skill__name">MongoDB</span>
-            </div>
-            <div class="skill" skillname="Git">
-               <div class="skill__circle">
-                  <picture class="skill__picture">
-                     <img
-                        class="skill__logo"
-                        data-src="img/git-logo-removebg-preview.png"
-                        alt=""
-                     />
-                  </picture>
-               </div>
-               <span class="skill__name">Git/GitHub</span>
             </div>
          </div>
 
@@ -337,26 +374,6 @@
       </section>
 
       <section class="projects" id="projects">
-         <a class="project project--main" href="#helomi">
-            <h4 class="project__name">Helomi</h4>
-            <video
-               data-src="videos/helomi-compr.mp4"
-               alt=""
-               class="project__video"
-               loop
-               muted
-            ></video>
-         </a>
-         <a class="project" href="#nisclinic">
-            <h4 class="project__name">Nisclinic</h4>
-            <video
-               data-src="videos/nisclinic-compr.mp4"
-               alt=""
-               class="project__video"
-               muted
-               loop
-            ></video>
-         </a>
          <a class="project" href="#dgmmc">
             <h4 class="project__name">DGMMC</h4>
             <video
@@ -367,38 +384,49 @@
                loop
             ></video>
          </a>
-         <!-- <a class="project" href="#dad-jokes">
-            <h4 class="project__name">DAD JOKES</h4>
+         <!-- <a class="project project" href="#helomi">
+            <h4 class="project__name">Helomi</h4>
+            <video alt="" class="project__video" loop muted></video>
+         </a> -->
+         <a class="project" href="#nisclinic">
+            <h4 class="project__name">Nisclinic</h4>
             <video
-               src="./videos/dad-jokes-compr.mp4"
+               data-src="videos/nisclinic-compr.mp4"
                alt=""
                class="project__video"
                muted
                loop
             ></video>
-         </a> -->
+         </a>
+
+         <a class="project project" href="#helomi">
+            <h4 class="project__name">Helomi</h4>
+            <video
+               data-src="videos/helomi-compr.mp4"
+               alt=""
+               class="project__video"
+               loop
+               muted
+            ></video>
+         </a>
       </section>
 
       <footer class="footer">
          <img src="img/Dev-photo.PNG" alt="" />
-         <span>All rights reserved to Chima Orji.</span>
+         <span>Chima Divine Orji.</span>
       </footer>
 
       <div class="project--preview modal u-hidden">
          <h3>Helomi</h3>
          <div class="project__details">
-            <p class="parag">
-               Lorem ipsum dolor sit amet consectetur, adipisicing elit. At
-               itaque quasi, quae sapiente nulla saepe facilis minus qui ea ex,
-               cupiditate aliquam fugit quod temporibus molestias recusandae
-               eveniet mollitia voluptatibus?
-            </p>
+            <p class="parag"></p>
             <br />
             <strong>Technologies used: </strong>
-            <p class="tech-used parag">Lorem ipsum dolor sit amet.</p>
+            <p class="tech-used parag"></p>
          </div>
 
          <div class="project__actions">
+            <span></span>
             <a
                target="_blank"
                href=""

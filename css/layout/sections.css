@@ -2,7 +2,7 @@ section.what-i-do {
    grid-area: services;
    background: linear-gradient(
          101.53deg,
-         rgba(0, 0, 0, 0.5) 100%,
+         rgba(0, 0, 0, 0.3) 100%,
          rgb(151, 18, 58, 0)
       ),
       url(../../img/laptopcode.jpg);
@@ -10,8 +10,12 @@ section.what-i-do {
    background-size: cover;
    background-position: 0 40%; /* top and left values */
    padding: 3rem 5.5rem;
+   padding-bottom: 6rem;
+   /* box-shadow: 0 2.45rem 4rem rgb(0 0 0 / 41%), 0 2rem 2rem rgb(0 0 0 / 8%); */
    color: #a3a3a3;
+   z-index: 3;
 }
+
 .what-i-do h6 {
    position: relative;
    margin-bottom: 1rem;
@@ -32,7 +36,7 @@ section.what-i-do {
 .what-i-do .services {
    display: flex;
    flex-wrap: wrap;
-   gap: 3vw;
+   gap: max(3vw, 2.5rem);
 }
 
 /* Project section */
@@ -40,6 +44,7 @@ section.skills {
    grid-area: skills;
    display: grid;
    grid-template-columns: minmax(min-content, 60%) 1fr;
+   --grid-gutter-line: #c7c7c7;
    border-bottom: 1px solid var(--grid-gutter-line);
 }
 /* < 900px */
@@ -47,6 +52,7 @@ section.skills {
    section.skills {
       display: flex;
       flex-direction: column;
+      border-bottom: none;
    }
 }
 
@@ -64,13 +70,27 @@ section.projects {
    gap: var(--grid-gutter);
    padding: var(--grid-gutter);
    padding-top: calc(var(--grid-gutter) * 1.5);
+   position: relative;
 }
 section.projects:hover .project:not(:hover)::before {
    background: rgba(0, 0, 0, 0.65);
 }
 
-@media screen and (max-width: 800px) {
-   section.projects {
-      grid-template-columns: 1fr;
+section.projects::after {
+   content: '';
+   position: absolute;
+   top: 100%;
+   right: 100%;
+   transform: translate(50%, -50%);
+   border-radius: 50%;
+   width: 5rem;
+   aspect-ratio: 1;
+   background-color: #fff;
+   z-index: 20;
+}
+
+@media screen and (max-width: 56.25em) {
+   section.projects::after {
+      display: none;
    }
 }

@@ -1,13 +1,13 @@
 .footer {
    grid-area: footer;
-   height: 17vh;
+   /* height: 17vh; */
    display: flex;
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
    gap: 1.5rem;
    font-size: 1.3rem;
-   /* padding-block: 2.5rem; */
+   padding-block: 2.5rem;
    background-color: #070707;
    text-align: center;
    color: var(--color-gray-light);

@@ -18,3 +18,12 @@
       transform: translateY(-50%) scaleX(1);
    }
 }
+
+@keyframes reveal-width {
+   from {
+      max-width: 0;
+   }
+   to {
+      max-width: 1500px;
+   }
+}

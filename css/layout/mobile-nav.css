@@ -2,19 +2,19 @@ aside.mobile-nav {
    position: fixed;
    top: 0;
    left: 0;
-   background: #202020;
+   background: #141414;
    width: 100%;
    padding: 15rem 8rem;
    transform: translateY(-100%);
-   /* opacity: none; */
    overflow: hidden;
    transition: transform 0.5s, box-shadow 0.2s 0.2s;
-   z-index: 19;
+   z-index: 31;
 }
 
-aside.mobile-nav.drawn-out {
-   transform: translateY(0);
-   /* box-shadow: 0 2rem 3rem rgb(0 0 0 / 40%), 0 3rem 6rem rgb(0 0 0 / 20%); */
+@media screen and (max-width: 37.5em) {
+   aside.mobile-nav.drawn-out {
+      transform: translateY(0);
+   }
 }
 
 .mobile-nav ul > *:not(:last-child) {
@@ -25,7 +25,7 @@ aside.mobile-nav.drawn-out {
    width: max-content;
    text-transform: uppercase;
    font-size: min(5vw, 2.5rem);
-   color: #bdbdbd;
+   color: #d1d1d1;
    padding-inline: 5vw;
    position: relative;
    transition: color 0.2s;
@@ -50,7 +50,7 @@ aside.mobile-nav.drawn-out {
    left: 100%;
 }
 
-.mobile-nav ul li:hover {
+.mobile-nav ul li:hover a {
    color: var(--color-pry);
 }
 
@@ -63,6 +63,6 @@ aside.mobile-nav.drawn-out {
    position: fixed;
    inset: 0;
    background: rgba(46, 1, 1, 0.75);
-   z-index: 9;
+   z-index: 30;
    transition: background 1s;
 }
