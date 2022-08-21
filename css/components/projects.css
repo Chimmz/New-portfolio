@@ -17,7 +17,7 @@
 }
 
 .project::before {
-   content: '';
+   content: "";
    position: absolute;
    inset: 0;
    background: rgba(0, 0, 0, 0.4);
@@ -108,15 +108,15 @@
 .project--preview h3 {
    font-size: 3rem;
    letter-spacing: 2px;
-   color: var(--color-pry);
+   color: var(--color-pry-dark);
    position: relative;
 }
 
 .project--preview h3::before {
-   content: '';
+   content: "";
    position: absolute;
    inset-inline: 0;
-   bottom: 0;
+   bottom: -5px;
    width: 3ch;
    height: 6px;
    background: #000;

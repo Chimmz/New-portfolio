@@ -15,7 +15,8 @@
    --color-gray-light: #d6d6d6;
    --color-gray-lighter: #f5f5f5;
 
-   --default-fsize: 1.9rem;
+   --default-fsize: 2rem;
+   scroll-padding-top: 3rem;
 }
 
 *,
@@ -55,21 +56,22 @@ body {
    grid-template-columns: max-content 1fr 1fr;
    /* grid-template-rows: repeat(6, max-content); */
    grid-template-areas:
-      'nav     nav      nav'
-      'header  header   header'
-      'leftnav services services'
-      'leftnav skills   skills'
-      'leftnav projects projects'
-      'footer footer   footer';
+      "nav     nav      nav"
+      "header  header   header"
+      "leftnav services services"
+      "leftnav skills   skills"
+      "leftnav projects projects"
+      "footer  footer   footer";
 
    min-height: 100vh;
-   font-family: 'Poppins', sans-serif;
+   font-family: "Poppins", sans-serif;
    font-size: var(--default-fsize);
    color: var(--color-gray-dark);
 }
 
 ::selection {
-   background: var(--color-pry-lightest);
+   background: var(--color-pry-light);
+   color: var(--color-sec);
 }
 
 ::-webkit-scrollbar {
@@ -84,7 +86,7 @@ body {
    border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-   background: #b9b9b9;
+   background: #949494;
 }
 
 a,

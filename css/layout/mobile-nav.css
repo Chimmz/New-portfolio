@@ -2,7 +2,7 @@ aside.mobile-nav {
    position: fixed;
    top: 0;
    left: 0;
-   background: #141414;
+   background-color: var(--color-pry-dark);
    width: 100%;
    padding: 15rem 8rem;
    transform: translateY(-100%);
@@ -25,7 +25,7 @@ aside.mobile-nav {
    width: max-content;
    text-transform: uppercase;
    font-size: min(5vw, 2.5rem);
-   color: #d1d1d1;
+   color: #fff;
    padding-inline: 5vw;
    position: relative;
    transition: color 0.2s;
@@ -33,7 +33,7 @@ aside.mobile-nav {
 
 .mobile-nav ul li::before,
 .mobile-nav ul li::after {
-   content: '';
+   content: "";
    position: absolute;
    bottom: 50%;
    transform: translateY(50%);
@@ -51,7 +51,7 @@ aside.mobile-nav {
 }
 
 .mobile-nav ul li:hover a {
-   color: var(--color-pry);
+   color: rgba(255, 255, 255, 0.5);
 }
 
 .mobile-nav ul li:hover::before,
@@ -62,7 +62,8 @@ aside.mobile-nav {
 .overlay {
    position: fixed;
    inset: 0;
-   background: rgba(46, 1, 1, 0.75);
+   height: 100vh;
+   background: rgba(19, 19, 19, 0.75);
    z-index: 30;
    transition: background 1s;
 }

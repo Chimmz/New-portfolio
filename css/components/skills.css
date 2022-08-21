@@ -5,7 +5,7 @@
    align-content: flex-start;
    row-gap: 7rem;
    font-size: 1.5rem;
-   padding: calc(2vw + 3rem) 2vw 2vw 2vw;
+   padding: calc(2vw + 5rem) max(2vw, 3rem);
    background: var(--color-white);
    z-index: 2;
    overflow: hidden;
@@ -19,7 +19,7 @@
    display: flex;
    flex-wrap: wrap;
    position: relative;
-   gap: 2px;
+   gap: 1rem;
 }
 
 @media (max-width: 37.5em) {
@@ -34,7 +34,7 @@
 }
 
 .core-skills .skill-group::before {
-   content: '';
+   content: "";
    bottom: calc(100%);
    inset-inline: 0;
    height: 14px;
@@ -76,7 +76,7 @@
 }
 
 .core-skills::before {
-   content: '';
+   content: "";
    position: absolute;
    top: 0;
    left: 0;
@@ -107,7 +107,7 @@
 }
 
 .skill__box::after {
-   content: '';
+   content: "";
    position: absolute;
    inset: 0;
    background: var(--color-white);
@@ -137,57 +137,57 @@
    transform: scale(1);
 }
 
-.skill[skillname*='Redux'] .skill__logo,
-.skill[skillname*='Figma'] .skill__logo {
+.skill[skillname*="Redux"] .skill__logo,
+.skill[skillname*="Figma"] .skill__logo {
    transform: scale(1.9);
 }
-.skill[skillname*='Redux']:hover .skill__box::after {
+.skill[skillname*="Redux"]:hover .skill__box::after {
    background: #f5e3f5;
 }
-.skill[skillname*='React']:hover .skill__box::after {
+.skill[skillname*="React"]:hover .skill__box::after {
    background: #ddf1f8;
 }
-.skill[skillname*='Next']:hover .skill__box::after {
+.skill[skillname*="Next"]:hover .skill__box::after {
    background: #ebebeb;
 }
-.skill[skillname*='JavaScript']:hover .skill__box::after {
+.skill[skillname*="JavaScript"]:hover .skill__box::after {
    background: #f7df1e;
 }
-.skill[skillname*='Sass']:hover .skill__box::after {
+.skill[skillname*="TypeScript"]:hover .skill__box::after {
+   background: #f7df1e;
+}
+
+.skill[skillname*="Sass"]:hover .skill__box::after {
    background: #f1dde6;
 }
-.skill[skillname*='MongoDB']:hover .skill__box::after {
+.skill[skillname*="MongoDB"]:hover .skill__box::after {
    background: #c7f1c4;
 }
-.skill[skillname*='Figma']:hover .skill__box::after {
+.skill[skillname*="Figma"]:hover .skill__box::after {
    background: #f7e5de;
 }
-.skill[skillname*='HTML']:hover .skill__box::after {
+.skill[skillname*="HTML"]:hover .skill__box::after {
    background: linear-gradient(137.08deg, #d4dbf5 5.58%, #f7e4dc 108.84%);
 }
-.skill[skillname*='Node']:hover .skill__box::after {
+.skill[skillname*="Node"]:hover .skill__box::after {
    background: linear-gradient(149.16deg, #c7f1c4 14.67%, #dddddd 88.46%);
 }
-.skill[skillname*='Git']:hover .skill__box::after {
+.skill[skillname*="Git"]:hover .skill__box::after {
    background: #ffe5d3;
 }
-.skill[skillname*='MongoDB'] .skill__logo,
-.skill[skillname*='Node'] .skill__logo,
-.skill[skillname*='Next'] .skill__logo {
+.skill[skillname*="MongoDB"] .skill__logo,
+.skill[skillname*="Node"] .skill__logo,
+.skill[skillname*="Next"] .skill__logo {
    transform: scale(1.5);
 }
-.skill[skillname*='HTML'] .skill__logo {
+.skill[skillname*="HTML"] .skill__logo {
    transform: scale(1.5);
-   background: linear-gradient(
-      to right,
-      #fff3ee 5.58%,
-      #dce3ff 108.84%
-   ) !important;
+   background: linear-gradient(to right, #fff3ee 5.58%, #dce3ff 108.84%) !important;
 }
-.skill[skillname*='Node'] .skill__logo {
+.skill[skillname*="Node"] .skill__logo {
    transform: scale(1.7);
 }
-.skill[skillname*='Git'] .skill__logo {
+.skill[skillname*="Git"] .skill__logo {
    transform: scale(1.8);
 }
 
@@ -196,8 +196,8 @@
    display: flex;
    flex-wrap: wrap;
    align-content: flex-start;
-   gap: 2rem;
-   padding: 2vw;
+   gap: 1rem;
+   padding: max(2vw, 3rem);
    color: var(--color-sec);
    border-left: 1px solid var(--grid-gutter-line);
 }
@@ -211,8 +211,8 @@
    width: max-content;
    padding: 1.2rem;
    border-radius: 4px;
-   background: #f7f7f7;
-   /* border: 1px solid #e6e6e6; */
+   /* background: #f7f7f7; */
+   border: 1px solid #e6e6e6;
    font-size: 1.6rem;
    position: relative;
 }

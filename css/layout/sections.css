@@ -1,10 +1,6 @@
 section.what-i-do {
    grid-area: services;
-   background: linear-gradient(
-         101.53deg,
-         rgba(0, 0, 0, 0.3) 100%,
-         rgb(151, 18, 58, 0)
-      ),
+   background: linear-gradient(101.53deg, rgba(0, 0, 0, 0.3) 100%, rgb(151, 18, 58, 0)),
       url(../../img/laptopcode.jpg);
 
    background-size: cover;
@@ -23,7 +19,7 @@ section.what-i-do {
    padding-left: 1.2rem;
 }
 .what-i-do h6::before {
-   content: '';
+   content: "";
    position: absolute;
    top: 50%;
    right: 100%;
@@ -77,7 +73,7 @@ section.projects:hover .project:not(:hover)::before {
 }
 
 section.projects::after {
-   content: '';
+   /* content: ""; */
    position: absolute;
    top: 100%;
    right: 100%;

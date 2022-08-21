@@ -11,9 +11,9 @@
 
 .service__title {
    font-size: 1.2em;
-   font-family: 'Montserrat', sans-serif;
+   font-family: "Montserrat", sans-serif;
    color: #f5f5f5;
-   max-width: 20ch;
+   max-width: 15ch;
 }
 
 .service__title::first-letter {
@@ -28,7 +28,7 @@
    align-self: start;
 }
 
-.service > img[src*='backend'] ~ .service__note {
+.service > img[src*="backend"] ~ .service__note {
    margin-left: 2px;
 }
 
