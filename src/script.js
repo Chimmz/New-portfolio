@@ -1,24 +1,23 @@
 import * as projectHandlers from "./project.js";
-import { allProjects } from "./projects.js";
+import projectsData from "./projects-data.js";
 
 const projectModal = document.querySelector(".project--preview");
 const overlay = document.querySelector(".overlay");
 
 const showProject = function (hashStr) {
    if (!hashStr) return;
-   const projName = hashStr.split("#")[1];
+   let str = hashStr.split("#")[1];
 
-   if (projName === "close-project") {
+   if (str === "close-project") {
       projectModal.classList.add("u-hidden");
       return overlay.classList.add("u-hidden");
    }
 
-   const project = allProjects[projName];
-   if (!project) return;
+   const proj = projectsData[str];
+   if (!proj) return;
 
-   project.name = projName.replaceAll("-", " ").toUpperCase();
    overlay.classList.remove("u-hidden");
-   projectHandlers.handleDisplayProject(projectModal, project);
+   projectHandlers.handleDisplayProject(projectModal, proj);
 };
 
 showProject(window.location.hash);

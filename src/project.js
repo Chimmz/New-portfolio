@@ -11,7 +11,7 @@ export const handleProjectHover = function () {
 
    video
       .play()
-      .then((_) => console.log("Video loaded and playing"))
+      .then(() => console.log("Video loaded and playing"))
       .catch(console.log);
 };
 
@@ -19,10 +19,22 @@ export const handleDisplayProject = function (displayContainer, proj) {
    displayContainer.querySelector("h3").textContent = proj.name;
    displayContainer.querySelector("p.parag").textContent = proj.details;
    displayContainer.querySelector(".tech-used").textContent = proj.techUsed.join(", ");
-   displayContainer.querySelector(".project__actions").querySelector("#project-url").href =
-      proj.url;
-   displayContainer.querySelector(".project__actions").querySelector("#github-url").href =
-      proj.githubUrl;
+
+   const linkIcon = displayContainer
+      .querySelector(".project__actions")
+      .querySelector("#project-url");
+
+   linkIcon.style.visibility = !proj.url ? "hidden" : "visible";
+   proj.url && (linkIcon.href = proj.url);
+
+   const githubLinkIcon = displayContainer
+      .querySelector(".project__actions")
+      .querySelector("#github-url");
+
+   console.log(linkIcon, githubLinkIcon);
+
+   githubLinkIcon.style.visibility = !proj.githubUrl ? "hidden" : "visible";
+   proj.githubUrl && (githubLinkIcon.href = proj.githubUrl);
 
    displayContainer.classList.remove("u-hidden");
 };

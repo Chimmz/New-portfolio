@@ -5,7 +5,7 @@
    width: 100%;
    position: relative;
    cursor: pointer;
-   z-index: 21;
+   /* z-index: 21; */
 }
 
 .project:hover {
@@ -107,8 +107,7 @@
 
 .project--preview h3 {
    font-size: 3rem;
-   letter-spacing: 2px;
-   color: var(--color-pry-dark);
+   color: var(--color-pry);
    position: relative;
 }
 

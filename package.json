@@ -18,8 +18,8 @@
       "url": "https://github.com/Chimmz/New-portfolio/issues"
    },
    "homepage": "https://github.com/Chimmz/New-portfolio#readme",
-   "dependencies": {
-      "@parcel/transformer-image": "^2.2.1",
-      "parcel": "^2.2.1"
+   "devDependencies": {
+      "@parcel/transformer-image": "^2.7.0",
+      "parcel": "^2.7.0"
    }
 }

@@ -34,7 +34,7 @@
    width: 100%;
    padding: 3.5rem max(3.6vw, 3.8rem);
    border-inline-end: 1px solid transparent;
-   color: #ffdcdcb3;
+   color: rgba(255, 255, 255, 0.85);
    position: relative;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .left-nav > *:hover {
-   background: rgba(0, 0, 0, 0.12);
+   background: rgba(0, 0, 0, 0.08);
    color: #fff;
    border-inline-end: 1px solid var(--color-pry-dark);
 }
@@ -63,6 +63,7 @@
    border-radius: 3px;
    opacity: 0;
    visibility: hidden;
+   z-index: 25;
    transition: left 0.5s, opacity 0.5s;
 }
 
