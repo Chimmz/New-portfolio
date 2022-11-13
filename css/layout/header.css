@@ -1,15 +1,18 @@
 .header.profile {
    grid-area: header;
    max-width: 100%;
+   min-height: 80vh;
    display: flex;
    justify-content: space-between;
    align-items: center;
    gap: 5rem;
    padding: 6rem 10vw;
    padding-bottom: 7rem;
-   background: var(--color-white);
+   /* background: var(--color-white); */
    overflow: hidden;
+   position: relative;
    /* border-top: 1px solid #ecebeb; */
+   z-index: 4;
 }
 
 @media screen and (max-width: 56.25em) {
@@ -96,6 +99,7 @@
    flex-direction: column;
    align-items: center;
    gap: 3rem;
+   z-index: 4;
 }
 
 @media screen and (max-width: 56.25em) {
@@ -105,10 +109,19 @@
 }
 
 .profile__picture {
-   width: 22vw;
-   aspect-ratio: 1;
+   width: 30rem;
+   height: 30rem;
+   min-width: 30rem;
+   max-width: 30rem;
+   min-height: 30rem;
+   max-height: 30rem;
+   /* aspect-ratio: 1; */
    position: relative;
-   z-index: 1;
+   border-radius: 50%;
+   overflow: hidden;
+   border: 3px solid var(--color-sec);
+   background-color: #fff;
+   z-index: 4;
 }
 
 @media screen and (max-width: 56.25em) {
@@ -118,7 +131,7 @@
 }
 
 .profile__picture::before {
-   content: "";
+   /* content: ""; */
    position: absolute;
    top: 50%;
    height: 35%;
@@ -141,8 +154,10 @@
    display: block;
    width: 100%;
    height: 100%;
-   border-radius: 50%;
-   border: 3px solid var(--color-sec);
+   /* border-radius: 50%; */
+   /* border: 3px solid var(--color-sec); */
+   object-fit: cover;
+   object-position: -20px 40%;
    /* box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2), 0 0 10px 3px rgba(0, 0, 0, 0.1); */
 }
 
@@ -150,12 +165,12 @@
    display: flex;
    gap: 7px;
    color: #494546;
-   /* background-color: #f1f1f1f1; */
+   background-color: #fff;
    /* border: 1px solid #e9e9e9; */
    border-radius: 9999px;
    padding: 12px 17px;
    position: relative;
-   box-shadow: 0 0.45rem 1rem rgb(0 0 0 / 15%), 0 2rem 4rem rgb(0 0 0 / 8%);
+   box-shadow: 0 0.45rem 1rem rgb(0 0 0 / 17%), 0 2rem 4rem rgb(0 0 0 / 10%);
 }
 .profile__socials .icon-link {
    background: none;

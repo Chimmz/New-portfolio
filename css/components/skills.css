@@ -154,7 +154,7 @@
    background: #f7df1e;
 }
 .skill[skillname*="TypeScript"]:hover .skill__box::after {
-   background: #f7df1e;
+   background: #007acc;
 }
 
 .skill[skillname*="Sass"]:hover .skill__box::after {
