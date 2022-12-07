@@ -13,9 +13,10 @@
    color: var(--color-gray-light);
 }
 .footer img {
-   width: 5rem;
+   width: 6rem;
    aspect-ratio: 1;
-   /* outline: 2px solid var(--color-pry); */
+   border: 1px solid gray;
    outline-offset: 3px;
    border-radius: 50%;
+   object-fit: cover;
 }
