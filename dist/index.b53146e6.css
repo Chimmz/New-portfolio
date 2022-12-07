@@ -1,0 +1,148 @@
+.nav {
+  padding: 5rem 4rem;
+  padding-inline: 10vw;
+  z-index: 30;
+  grid-area: nav;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 0;
+  display: flex;
+}
+
+@media screen and (max-width: 56.25em) {
+  .nav {
+    padding-block: 4rem;
+  }
+}
+
+@media screen and (min-width: 37.5em) and (max-width: 56.25em) {
+  .nav .greeting {
+    display: none;
+  }
+}
+
+.nav__logo {
+  color: var(--color-pry);
+  font-size: 6rem;
+}
+
+.nav__list {
+  border-radius: 999px;
+  align-items: center;
+  gap: 5rem;
+  animation: 2s forwards reveal-width;
+  display: flex;
+}
+
+@media screen and (max-width: 56.25em) {
+  .nav__list {
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .nav {
+    padding: 3rem 4rem;
+  }
+
+  .nav__list {
+    display: none;
+  }
+}
+
+.nav__link {
+  width: max-content;
+  color: var(--color-sec);
+  font-size: 1.85rem;
+  text-decoration: none;
+  transition: color .2s;
+  display: block;
+  position: relative;
+}
+
+.nav__link:hover {
+  color: #bdbdbd;
+}
+
+.nav__list > :not(:last-child) > .nav__link:before {
+  content: "";
+  width: 1px;
+  height: 40%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.nav-toggler {
+  cursor: pointer;
+  z-index: 32;
+  flex-direction: column;
+  gap: 5px;
+  padding: 2rem 1rem;
+  display: none;
+  position: relative;
+}
+
+@media screen and (max-width: 37.5em) {
+  .nav {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row !important;
+  }
+
+  .nav-toggler {
+    display: flex;
+  }
+}
+
+.nav-toggler > * {
+  height: 2px;
+  width: 25px;
+  transform-origin: 100%;
+  background: var(--color-pry);
+  transition: transform .5s, color .4s;
+  display: block;
+}
+
+.nav-toggler > :nth-child(2) {
+  animation-delay: 1s;
+  -webkit-animation-delay: .3s;
+}
+
+.nav-toggler > :nth-child(3) {
+  animation-delay: 2s;
+  -webkit-animation-delay: .15s;
+}
+
+.nav-toggler.nav-drawn-out > * {
+  z-index: 32;
+  background: #fff;
+}
+
+.nav-toggler.nav-drawn-out > :nth-child(1) {
+  transform: rotate(-45deg)translateY(-100%);
+}
+
+.nav-toggler.nav-drawn-out > :nth-child(2) {
+  transform: scale(0);
+}
+
+.nav-toggler.nav-drawn-out > :nth-child(3) {
+  transform: rotate(45deg)translateY(100%);
+}
+
+.nav-toggler--fixed {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+}
+
+/*# sourceMappingURL=index.b53146e6.css.map */

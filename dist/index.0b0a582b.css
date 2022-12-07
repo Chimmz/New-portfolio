@@ -1,0 +1,47 @@
+@keyframes scale-down-up {
+  0% {
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(5rem);
+  }
+}
+
+@keyframes adjust-profile-picture {
+  from {
+    transform: translateY(-50%)scaleX(0);
+  }
+
+  to {
+    transform: translateY(-50%)scaleX(1);
+  }
+}
+
+@keyframes reveal-width {
+  from {
+    max-width: 0;
+  }
+
+  to {
+    max-width: 1500px;
+  }
+}
+
+/*# sourceMappingURL=index.0b0a582b.css.map */

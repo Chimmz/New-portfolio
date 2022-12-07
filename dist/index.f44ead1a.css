@@ -1,0 +1,24 @@
+.footer {
+  text-align: center;
+  color: var(--color-gray-light);
+  background-color: #070707;
+  flex-wrap: wrap;
+  grid-area: footer;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding-block: 4rem;
+  font-size: 1.3rem;
+  display: flex;
+}
+
+.footer img {
+  width: 6rem;
+  aspect-ratio: 1;
+  outline-offset: 3px;
+  object-fit: cover;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=index.f44ead1a.css.map */
